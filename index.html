@@ -22,55 +22,73 @@
                 <q>To travel is to love</q>
             </div>
         </section>
-        <section id="holiday-list" class="flex flex-column text-center border">
-            <div class="flex flex-column center-container border">
-                <div id="tool-bar" class="border">
-                    <div>
+        <section id="holiday-list" class=" text-center border container">
+            <div class="row flex">
+                <div class="col-6">
+                    <div id="tool-bar" class="border">
                         <div>
-                            <div>
-                                <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
-                                <input id="end-date" type="date" placeholder="End Date" max="2020-12-26" />
+                            <div class="flex flex-wrap">
+                                <div class="tooltip">
+                                    <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
+                                    <span class="tooltip-text">Start Date</span>
+                                </div>
+                                <div class="tooltip">
+                                    <input id="end-date" type="date" placeholder="End Date" max="2020-12-26" />
+                                    <span class="tooltip-text">End Date</span>
+                                </div>
                                 <input id="day-off" type="text" placeholder="Days off" />
                             </div>
-                            <button id="next-working-day-btn">Next working day</button>
-                            <button id="working-days-btn">Working days between</button>
+                            <button id="next-working-day-btn" class="btn">Next working day</button>
+                            <button id="working-days-btn" class="btn">Working days between</button>
                         </div>
-                        <button id="countries-list-btn">Render Countries List</button>
-                        <button id="languages-list-btn">Render Languages List</button>
-                        <div>
+                        <div class="flex flex-wrap justify-content-center">
                             <input id="search-query" type="text" placeholder="Search" />
                             <input id="year-query" type="text" placeholder="Year" />
                             <input id="month-query" type="text" placeholder="Month" />
                             <input id="day-query" type="text" placeholder="Day" />
                             <input id="country-query" type="text" placeholder="Country" />
                             <input id="language-query" type="text" placeholder="Language Code" />
-                            <button id="holidays-btn">Render Holiday</button>
+                            <button id="holidays-btn" class="btn">Render Holiday</button>
                         </div>
                     </div>
+                    <div id="holidays-list" class="flex flex-column ">
+                        <h1>Holiday of a Country</h1>
+                        <ul>
+                            <li>a</li>
+                            <li>b</li>
+                            <li>c</li>
+                            <li>d</li>
+                            <li>e</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="holidays-list" class="flex flex-column border">
-                    <h1>Holiday of a Country</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
-                </div>
-                <div id="countries-list" class="flex flex-column border">
-                    <h1>Countries List</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
-                </div>
-                <div id="languages-list" class="flex flex-column border">
-                    <h1>Languages List</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
+                <div class="col-6 ">
+                    <div id="countries-list" class="flex flex-column ">
+                        <h1>Countries List <button id="countries-list-btn" class="btn">Render Countries List</button>
+                        </h1>
+                        <ul>
+                            <li>a</li>
+                            <li>b</li>
+                            <li>c</li>
+                            <li>d</li>
+                            <li>e</li>
+                        </ul>
+                    </div>
+                    <div id="languages-list" class="flex flex-column ">
+                        <h1>Languages List <button id="languages-list-btn" class="btn">Render Languages List</button>
+                        </h1>
+                        <ul>
+                            <li>a</li>
+                            <li>b</li>
+                            <li>c</li>
+                            <li>d</li>
+                            <li>e</li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
 
