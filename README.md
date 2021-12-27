@@ -15,6 +15,25 @@ Outcome :
 - Holiday API Documentation
 - Exercise walkthrough: "Rendering a list of countries code"
 
+## Story
+
+As the covid situation is subsiding, more and more countries are open their border for travelers. There is no better time to travel away from work and even home during your holidays.
+There is! When it is also holidaying time in your getaway destination.
+
+John Doe is an office worker who loves to travel. For this year (2020) he is planning to visit England to visit his family and friends. He wants to know what are holidays will occur during his visit so that he could also enjoy those special occasions.
+So John went on `all holidays` - our website - to find out about what holidays will be happening in England during his journey.
+
+As a new front-end developer, you are given a back-end API![Holiday](https://holidayapi.com/) and required to build a front-end web application. To help users like John to :
+
+- See all holidays in any chosen country. _Hint: you need to help user to choose the correct country code first because users like John will have no idea what is the code for ENGLAND_
+- See all country's code to use for searching holidays.
+- Can enhance the search by choosing the exact day, month, year.
+- Can translate the name of the country's holiday to their preferred languages. _Hint: you need to help the user to choose the correct languages code in prior_
+- See all languages code to use for translation.
+- Can use holiday name, country, and year to find the exact day that holiday occurred.
+
+! Please read the API documentation carefully before implementing any features. Pay attention to **REQUIRED PARAMETER/QUERIES** in your API documentation.
+
 ## Requirement
 
 1. Make the function for the `Render Languages List` button so that :
@@ -37,22 +56,3 @@ Outcome :
 4. Improve your `Render Holiday` function so that :
 
    - When adding `Holiday name`, the user sees a list of matching holidays of all countries (**Carefully read the API documentation for request's required parameters** )
-
-## Story
-
-As the covid situation is subsiding, more and more countries are open their border for travelers. There is no better time to travel away from work and even home during your holidays.
-There is! When it is also holidaying time in your getaway destination.
-
-John Doe is an office worker who loves to travel. For this year (2020) he is planning to visit England to visit his family and friends. He wants to know what are holidays will occur during his visit so that he could also enjoy those special occasions.
-So John went on `all holidays` - our website - to find out about what holidays will be happening in England during his journey.
-
-As a new front-end developer, you are given a back-end API![Holiday](https://holidayapi.com/) and required to build a front-end web application. To help users like John to :
-
-- See all holidays in any chosen country. _Hint: you need to help user to choose the correct country code first because users like John will have no idea what is the code for ENGLAND_
-- See all country's code to use for searching holidays.
-- Can enhance the search by choosing the exact day, month, year.
-- Can translate the name of the country's holiday to their preferred languages. _Hint: you need to help the user to choose the correct languages code in prior_
-- See all languages code to use for translation.
-- Can use holiday name, country, and year to find the exact day that holiday occurred.
-
-! Please read the API documentation carefully before implementing any features. Pay attention to **REQUIRED PARAMETER/QUERIES** in your API documentation.
