@@ -116,7 +116,7 @@ nav > h1 {
   /* box-shadow: 0 5px 15px 5px #80808036; */
 }
 #holidays-list > ul {
-    height: 23.5rem ;  
+    height: 29.5rem ;  
 }
 #countries-list > ul > li, #languages-list > ul > li , #holidays-list > ul > li{
   border: 1px solid black;
@@ -146,9 +146,7 @@ nav > h1 {
     background-color: #b9d7fd;
 }
 
-.group-input{
-  margin: 1em 0
-}
+
 .tooltip{
     display: inline-block;
     position: relative;
@@ -192,21 +190,49 @@ input[id$=query]{
 #tool-bar .tooltip, #tool-bar input#day-off{
   width: 32%;
 }
-.wrapper-tooltip{
+
+/* .wrapper-days-btn{
+  position: relative;
   display: inline-block;
 }
-.wrapper-tooltip{
-  position: relative;
-}
-.wrapper-tooltip span{
-  /* display: none; */
+.wrapper-days-btn span{
   position: absolute;
-  left: -5rem;
-  top:50%;
-  transform: translate(0,-50%);
   background-color:#8bbcf9 ;
   padding: 5px 10px;
+  
 }
-.wrapper-tooltip span::after{
-  border-width: 5px;
+.wrapper-days-btn > span:after{
+  content: "";
+  border: 10px solid;
+  position: absolute;
 }
+.hidden{
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.wrapper-days-btn.left span{
+  left: -4rem;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.wrapper-days-btn.left span:after{
+  border-color: transparent   transparent transparent #8bbcf9;
+  top: 50%;
+  right: -30%;
+  transform: translate(0, -50%);
+}
+
+.wrapper-days-btn.right span{
+  right: -4rem;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.wrapper-days-btn.right span:after{
+  border-color: transparent #8bbcf9  transparent transparent ;
+  top: 50%;
+  left: -30%;
+  transform: translate(0, -50%);
+}
+.group-input{
+  margin: 1em 0
+} */

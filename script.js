@@ -140,15 +140,25 @@ const renderHolidays = async()=>{
         console.log("err", err)
     }
 }
+const nextWorkingDayBtn = document.getElementById("next-working-day-btn")
+const nextWorkingDay = nextWorkingDayBtn.parentElement.children[1]
+const renderNextWorkDay = async({startDate, days})=>{
+    try{        
+        const data = await getNextWorkingDay(startDate, days)
+        console.log("data", data)
+    } catch(err){
+        console.log("err", err)
+    }
+}
 
 //Handle event
 let startDate = null
 let endDate = null
 let days = null
 let searchQuery = null
-let yearQuery = null
+let yearQuery = 2020
 let dayQuery = null
-let countryQuery = null
+let countryQuery = "VN"
 let languageQuery = null
 let monthQuery = null
 document.getElementById("start-date").addEventListener("change",(e)=>{
