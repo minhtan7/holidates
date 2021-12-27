@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="text-center border">
-            <h1>HoliSafe</h1>
-        </nav>
+      <nav class="text-center border">
+        <h1>HoliSafe</h1>
+      </nav>
     </header>
     <main>
-        <section id="intro" class="flex text-center border">
+      <section id="intro" class="flex text-center border">
+        <div>
+          <h4>HoliSafe</h4>
+          <q>To travel is to love</q>
+        </div>
+      </section>
+      <section id="holiday-list" class="flex flex-column text-center border">
+        <div class="flex flex-column center-container border">
+          <div id="tool-bar" class="border">
             <div>
-                <h4>HoliSafe</h4>
-                <q>To travel is to love</q>
+              <div>
+                <div>
+                  <input
+                    id="start-date"
+                    type="date"
+                    placeholder="Start Date"
+                    max="2020-12-26"
+                  />
+                  <input
+                    id="end-date"
+                    type="date"
+                    placeholder="End Date"
+                    max="2020-12-26"
+                  />
+                  <input id="day-off" type="text" placeholder="Days off" />
+                </div>
+                <button id="next-working-day-btn">Next working day</button>
+                <button id="working-days-btn">Working days between</button>
+              </div>
+              <button id="countries-list-btn">Render Countries List</button>
+              <button id="languages-list-btn">Render Languages List</button>
+              <div>
+                <input id="search-query" type="text" placeholder="Search" />
+                <input id="year-query" type="text" placeholder="Year" />
+                <input id="month-query" type="text" placeholder="Month" />
+                <input id="day-query" type="text" placeholder="Day" />
+                <input id="country-query" type="text" placeholder="Country" />
+                <input
+                  id="language-query"
+                  type="text"
+                  placeholder="Language Code"
+                />
+                <button id="holidays-btn">Render Holiday</button>
+              </div>
             </div>
-        </section>
-        <section id="holiday-list" class="flex flex-column text-center border">
-            <div class="flex flex-column center-container border">
-                <div id="tool-bar" class="border">
-                    <div>
-                        <div>
-                            <div>
-                                <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
-                                <input id="end-date" type="date" placeholder="End Date" max="2020-12-26" />
-                                <input id="day-off" type="text" placeholder="Days off" />
-                            </div>
-                            <button id="next-working-day-btn">Next working day</button>
-                            <button id="working-days-btn">Working days between</button>
-                        </div>
-                        <button id="countries-list-btn">Render Countries List</button>
-                        <button id="languages-list-btn">Render Languages List</button>
-                        <div>
-                            <input id="search-query" type="text" placeholder="Search" />
-                            <input id="year-query" type="text" placeholder="Year" />
-                            <input id="month-query" type="text" placeholder="Month" />
-                            <input id="day-query" type="text" placeholder="Day" />
-                            <input id="country-query" type="text" placeholder="Country" />
-                            <input id="language-query" type="text" placeholder="Language Code" />
-                            <button id="holidays-btn">Render Holiday</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="holidays-list" class="flex flex-column border">
-                    <h1>Holiday of a Country</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
-                </div>
-                <div id="countries-list" class="flex flex-column border">
-                    <h1>Countries List</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
-                </div>
-                <div id="languages-list" class="flex flex-column border">
-                    <h1>Languages List</h1>
-                    <ul>
-                        <li>a</li>
-                        <li>b</li>
-                    </ul>
-
-                </div>
-            </div>
-        </section>
+          </div>
+          <div id="holidays-list" class="flex flex-column border">
+            <h1>
+              Holiday of a <span id="country-choice">Viet Nam (example)</span>
+            </h1>
+            <ul>
+              <li>Tet nguyen dan</li>
+              <li>b</li>
+            </ul>
+          </div>
+          <div id="countries-list" class="flex flex-column border">
+            <h1>Countries List</h1>
+            <ul>
+              <li>a</li>
+              <li>b</li>
+            </ul>
+          </div>
+          <div id="languages-list" class="flex flex-column border">
+            <h1>Languages List</h1>
+            <ul>
+              <li>a</li>
+              <li>b</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
