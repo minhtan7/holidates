@@ -1,0 +1,80 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+/* Utilities classes */
+.border {
+  border: 1px solid black;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.text-center {
+  text-align: center;
+}
+.center-container {
+  width: 50%;
+  align-self: center;
+}
+/* Nav start */
+nav {
+  width: 100%;
+  padding: 1rem;
+}
+nav > h1 {
+  font-size: 2rem;
+}
+
+/* Section intro start */
+#intro {
+  height: 40vh;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  background-image: url("https://wallpapercave.com/wp/wp8881504.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* Section holiday-list start */
+
+#holiday-list {
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#tool-bar {
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+#countries-list > h1, #languages-list > h1, #holidays-list >h1{
+    margin: 1rem 0;
+}
+#countries-list > ul, #languages-list > ul , #holidays-list > ul{
+  border: 1px solid black;
+  padding: 0;
+}
+#countries-list > ul > li, #languages-list > ul > li , #holidays-list > ul > li{
+  border: 1px solid black;
+  padding: 1.5em;
+  margin: 1em;
+  text-align: left;
+  list-style: none;
+}
+
+#load-more {
+  align-self: flex-end;
+}
