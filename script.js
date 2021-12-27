@@ -140,52 +140,43 @@ const renderHolidays = async()=>{
         console.log("err", err)
     }
 }
-const nextWorkingDayBtn = document.getElementById("next-working-day-btn")
-const nextWorkingDay = nextWorkingDayBtn.parentElement.children[1]
-const renderNextWorkDay = async({startDate, days})=>{
-    try{        
-        const data = await getNextWorkingDay(startDate, days)
-        console.log("data", data)
-    } catch(err){
-        console.log("err", err)
-    }
-}
+
 
 //Handle event
-let startDate = null
-let endDate = null
-let days = null
+// let startDate = null
+// let endDate = null
+// let days = null
 let searchQuery = null
 let yearQuery = 2020
 let dayQuery = null
 let countryQuery = "VN"
 let languageQuery = null
 let monthQuery = null
-document.getElementById("start-date").addEventListener("change",(e)=>{
-    startDate = e.target.value
-})
-document.getElementById("end-date").addEventListener("change",(e)=>{
-    endDate = e.target.value
-})
-document.getElementById("day-off").addEventListener("change",(e)=>{
-    days = e.target.value
-})
-document.getElementById("next-working-day-btn").addEventListener("click", async (e)=>{
-    e.preventDefault()
-    let data
-    if(startDate&&days){
-        data = await getNextWorkingDay(startDate, days)
-    }
-    console.log("data", data)
-})
-document.getElementById("working-days-btn").addEventListener("click", async (e)=>{
-    e.preventDefault()
-    let data
-    if(startDate && endDate){
-        data = await getWorkDays(startDate, endDate)
-    }
-    console.log("data", data)
-})
+// document.getElementById("start-date").addEventListener("change",(e)=>{
+//     startDate = e.target.value
+// })
+// document.getElementById("end-date").addEventListener("change",(e)=>{
+//     endDate = e.target.value
+// })
+// document.getElementById("day-off").addEventListener("change",(e)=>{
+//     days = e.target.value
+// })
+// document.getElementById("next-working-day-btn").addEventListener("click", async (e)=>{
+//     e.preventDefault()
+//     let data
+//     if(startDate&&days){
+//         data = await getNextWorkingDay(startDate, days)
+//     }
+//     console.log("data", data)
+// })
+// document.getElementById("working-days-btn").addEventListener("click", async (e)=>{
+//     e.preventDefault()
+//     let data
+//     if(startDate && endDate){
+//         data = await getWorkDays(startDate, endDate)
+//     }
+//     console.log("data", data)
+// })
 
 document.getElementById("countries-list-btn").addEventListener("click", async (e)=>{
     e.preventDefault()
