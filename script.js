@@ -31,7 +31,7 @@ const getHolidays = async ({country, year, month, day, language, search} )=>{
         let languageQuery=""
         let searchQuery=""
         if (country){
-        countryQuery = `&year=${country}`
+        countryQuery = `&country=${country}`
         }
         if (year){
         yearQuery = `&year=${year}`
@@ -48,7 +48,7 @@ const getHolidays = async ({country, year, month, day, language, search} )=>{
         if (search){
         searchQuery = `&search=${search}`
         }
-        let query = `${yearQuery}${monthQuery}${dayQuery}${languageQuery}${searchQuery}`
+        let query = `${yearQuery}${country}${monthQuery}${dayQuery}${languageQuery}${searchQuery}`
         const url = `https://holidayapi.com/v1/holidays?pretty${query}&key=${API_KEY}`
         console.log("url", url)
         const res = await fetch(url) 
@@ -205,6 +205,7 @@ document.getElementById("day-query").addEventListener("change",(e)=>{
 })
 document.getElementById("country-query").addEventListener("change",(e)=>{
     countryQuery = e.target.value
+    console.log(countryQuery)
 })
 document.getElementById("language-query").addEventListener("change",(e)=>{
     languageQuery = e.target.value

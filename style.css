@@ -83,6 +83,9 @@ nav > h1 {
   padding: 1.5em;
   margin-bottom: 1em;
 }
+#tool-bar h1{
+  margin: 1rem 0
+}
 #tool-bar input{
     margin: 0.2rem 0.1rem;
     padding: 5px 10px;
@@ -98,19 +101,19 @@ nav > h1 {
 }
 #countries-list > h1 > button, #languages-list > h1 > button {
     position: absolute;
-    right: 0;
+    right: -1rem;
     top: 0;
     transform: translate(0,-20%);
 }
 #countries-list > ul, #languages-list > ul , #holidays-list > ul{
-  border-bottom: 1px solid #80808036;
+  /* border-bottom: 1px solid #80808036; */
   padding: 0;
   overflow-y: scroll;
-  height: 42vh;
+  height: 18rem;
   /* box-shadow: 0 5px 15px 5px #80808036; */
 }
 #holidays-list > ul {
-    height: 55vh;  
+    height: 23.5rem ;  
 }
 #countries-list > ul > li, #languages-list > ul > li , #holidays-list > ul > li{
   border: 1px solid black;
@@ -118,6 +121,11 @@ nav > h1 {
   margin: 1em;
   text-align: left;
   list-style: none;
+}
+#countries-list ,#languages-list, #holidays-list{
+  padding: 1.5rem;
+  border: 1px solid gray;
+  margin-bottom: 2rem;
 }
 
 #load-more {
@@ -135,10 +143,13 @@ nav > h1 {
     background-color: #b9d7fd;
 }
 
-
+.group-input{
+  margin: 1em 0
+}
 .tooltip{
     display: inline-block;
     position: relative;
+    width: 32%;
 }
 .tooltip .tooltip-text{
     font-size: 0.7rem;
@@ -174,4 +185,7 @@ nav > h1 {
 
 input[id$=query]{
     width: 30%;
+}
+#tool-bar .tooltip, #tool-bar input#day-off{
+  width: 32%;
 }
