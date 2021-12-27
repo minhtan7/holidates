@@ -13,15 +13,17 @@
     <header>
         <nav class="text-center border">
             <h1>HoliSafe</h1>
+            <q>To travel is to love</q>
+
         </nav>
     </header>
     <main>
-        <section id="intro" class="flex text-center border">
+        <!-- <section id="intro" class="flex text-center border">
             <div>
                 <h4>HoliSafe</h4>
                 <q>To travel is to love</q>
             </div>
-        </section>
+        </section> -->
         <section id="holiday-list" class=" text-center border container">
             <div class="row flex">
                 <div class="col-6">
@@ -39,7 +41,10 @@
                                 </div>
                                 <input id="day-off" type="text" placeholder="Days off" />
                             </div>
-                            <button id="next-working-day-btn" class="btn">Next working day</button>
+                            <div class="wrapper-tooltip">
+                                <button id="next-working-day-btn" class="btn">Next working day</button>
+                                <span>Hello</span>
+                            </div>
                             <button id="working-days-btn" class="btn">Working days between</button>
                         </div>
                         <div class="flex flex-wrap justify-content-center">
