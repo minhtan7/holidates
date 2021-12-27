@@ -36,4 +36,22 @@ Outcome :
 
 4. Improve your `Render Holiday` function so that :
 
-- When add `Holiday name
+   - When add `Holiday name`, user see a list of matching holiday of all country (**Carefully read API documentation for request's required paramenter** )
+
+## Story
+
+As the covid situation is subsiding , more and more countries are open their border for travellers. There is no better time to travel away from work and even home during your holidays. Actually there is, when it is also holidays time in your get away destination.
+
+John Doe is an office worker who love to travel. For this year (2020) he is planning to visit England to visit his family and friends. He want to know what are the holidays that will be occur durring his visit so that he could also enjoy those special occasion.
+So John went on `all holidays` - our website - to find out about what holidays will be happening in Enland during his journey.
+
+As a new front-end developer, you are given with a back end API ![]() and required to build a front-end web application. To help users like John to :
+
+- See all holidays in any chosen country. _Hint: you need to help user to choose the correct country code first because users like John will have no idea what is the code for ENGLAND_
+- See all country's code to use it for searching holiday.
+- Can enhance the search by choosing exact day, month, year.
+- Can translate the name of the country's holiday to their prefered languagues. _Hint: you need to help user to choose the correct languages code in prior_
+- See all languages code to use it for translation.
+- Can use holiday name , country and year to find the exact day of that holiday occured.
+
+! Please read the API documentation carefully before implement any features. Pay attention on **REQUIRED PARAMENTER/QUERIES** in your api document.
