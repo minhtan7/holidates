@@ -48,7 +48,7 @@ const getHolidays = async ({country, year, month, day, language, search} )=>{
         if (search){
         searchQuery = `&search=${search}`
         }
-        let query = `${yearQuery}${country}${monthQuery}${dayQuery}${languageQuery}${searchQuery}`
+        let query = `${yearQuery}${countryQuery}${monthQuery}${dayQuery}${languageQuery}${searchQuery}`
         const url = `https://holidayapi.com/v1/holidays?pretty${query}&key=${API_KEY}`
         console.log("url", url)
         const res = await fetch(url) 
