@@ -83,7 +83,7 @@ const getWorkDays = async (startDate, endDate) => {
 const renderCountries = async()=>{
     try{
         const countriesList = document.getElementById("countries-list")
-        const ulCountriesList = countriesList.children[1]
+        const ulCountriesList = countriesList.children[2]
         ulCountriesList.innerHTML=""
         const data = await getCountries()
         console.log("data", data)
