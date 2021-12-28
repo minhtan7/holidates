@@ -5,6 +5,7 @@ const getCountries = async () => {
 		const url = `https://holidayapi.com/v1/countries?pretty&key=${API_KEY}`;
 		const res = await fetch(url);
 		const data = await res.json();
+        console.log("countries", data)
 		return data;
 	} catch (err) {
 		console.log('err', err);
@@ -52,7 +53,7 @@ const getHolidays = async ({ country, year, month, day, language, search }) => {
 		console.log('url', url);
 		const res = await fetch(url);
 		const data = await res.json();
-		console.log(data);
+		console.log("holidays",data);
 		return data;
 	} catch (err) {
 		console.log('err', err);
@@ -86,7 +87,6 @@ const renderCountries = async () => {
 		const ulCountriesList = countriesList.children[2];
 		ulCountriesList.innerHTML = '';
 		const data = await getCountries();
-		console.log('data', data);
 		data.countries.forEach((country, index) => {
 			const x = document.createElement('li');
 			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${country.name}</div><div class="li-text">Code: ${country.code}</div></div>`;
@@ -96,14 +96,13 @@ const renderCountries = async () => {
 		console.log('err', err);
 	}
 };
-const languagesList = document.getElementById('languages-list');
-const ulLanguagesList = languagesList.children[2];
+
 
 const renderLanguages = async () => {
 	try {
-		while (ulLanguagesList.firstChild) {
-			ulLanguagesList.removeChild(ulLanguagesList.firstChild);
-		}
+        const languagesList = document.getElementById('languages-list');
+        const ulLanguagesList = languagesList.children[2];
+		ulLanguagesList.innerHTML = '';
 		const data = await getLanguages();
 		data.languages.forEach((language, index) => {
 			const x = document.createElement('li');
@@ -115,16 +114,14 @@ const renderLanguages = async () => {
 	}
 };
 
-const holidaysList = document.getElementById('holidays-list');
-const ulHolidaysList = holidaysList.children[1];
+
 
 const renderHolidays = async () => {
 	try {
-		while (ulHolidaysList.firstChild) {
-			ulHolidaysList.removeChild(ulHolidaysList.firstChild);
-		}
+        const holidaysList = document.getElementById('holidays-list');
+        const ulHolidaysList = holidaysList.children[1];
+		ulHolidaysList.innerHTML = '';
 		const data = await getHolidays({ country: countryQuery, year: yearQuery, month: monthQuery, day: dayQuery, language: languageQuery, search: searchQuery });
-		console.log('data', data);
 		data.holidays.forEach((holiday, index) => {
 			const x = document.createElement('li');
 			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${holiday.name}</div><div class="li-text">${holiday.weekday.date.name} - ${
@@ -147,26 +144,12 @@ let countryQuery = 'VN';
 let languageQuery = null;
 let monthQuery = null;
 
-document.getElementById('countries-list-btn').addEventListener('click', (e) => renderCountries());
-document.getElementById('languages-list-btn').addEventListener('click', (e) => renderLanguages());
-document.getElementById('holidays-btn').addEventListener('click', (e) => {
-	renderHolidays();
-});
-document.getElementById('month-query').addEventListener('change', (e) => {
-	monthQuery = e.target.value;
-});
-document.getElementById('search-query').addEventListener('change', (e) => {
-	searchQuery = e.target.value;
-});
-document.getElementById('year-query').addEventListener('change', (e) => {
-	yearQuery = e.target.value;
-});
-document.getElementById('day-query').addEventListener('change', (e) => {
-	dayQuery = e.target.value;
-});
-document.getElementById('country-query').addEventListener('change', (e) => {
-	countryQuery = e.target.value;
-});
-document.getElementById('language-query').addEventListener('change', (e) => {
-	languageQuery = e.target.value;
-});
+document.getElementById('countries-list-btn').addEventListener('click', () => renderCountries());
+document.getElementById('languages-list-btn').addEventListener('click', () => renderLanguages());
+document.getElementById('holidays-btn').addEventListener('click', () => renderHolidays());
+document.getElementById('month-query').addEventListener('change', (e) => monthQuery = e.target.value);
+document.getElementById('search-query').addEventListener('change', (e) => searchQuery = e.target.value);
+document.getElementById('year-query').addEventListener('change', (e) => yearQuery = e.target.value);
+document.getElementById('day-query').addEventListener('change', (e) => dayQuery = e.target.value);
+document.getElementById('country-query').addEventListener('change', (e) => countryQuery = e.target.value);
+document.getElementById('language-query').addEventListener('change', (e) => languageQuery = e.target.value);
