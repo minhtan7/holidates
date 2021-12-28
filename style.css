@@ -297,7 +297,6 @@ html {
 }
 
 li:nth-child(even) {
-	border-radius: 20px;
 	background-color: rgb(247, 247, 247);
 }
 
