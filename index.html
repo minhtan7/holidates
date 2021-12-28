@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HoliDates</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header>
-        <nav class="text-center border">
-            <h1>HoliSafe</h1>
-            <q>To travel is to love</q>
-
-        </nav>
-    </header>
-    <main>
-        <!-- <section id="intro" class="flex text-center border">
+	<body>
+		<header>
+			<nav class="text-center border">
+				<h1>HoliDates</h1>
+				<q>To travel is to love</q>
+			</nav>
+		</header>
+		<main>
+			<!-- <section id="intro" class="flex text-center border">
             <div>
                 <h4>HoliSafe</h4>
                 <q>To travel is to love</q>
             </div>
         </section> -->
-        <section id="holiday-list" class=" text-center border container">
-            <div class="row flex">
-                <div class="col-6">
-                    <div id="tool-bar" class="border">
-                        <h1>Query Option</h1>
-                        <!-- <div class="group-input">
+			<section id="holiday-list" class="text-center border container">
+				<div class="row flex">
+					<div class="col-6">
+						<div id="tool-bar" class="border">
+							<h1>Query Option</h1>
+							<!-- <div class="group-input">
                             <div class="flex flex-wrap">
                                 <div class="tooltip">
                                     <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
@@ -50,60 +51,55 @@
                                 <span class="">Hello</span>
                             </div>
                         </div> -->
-                        <div class="flex flex-wrap justify-content-center">
-                            <input id="search-query" type="text" placeholder="Search" />
-                            <input id="year-query" type="text" placeholder="Year" />
-                            <input id="month-query" type="text" placeholder="Month" />
-                            <input id="day-query" type="text" placeholder="Day" />
-                            <input id="country-query" type="text" placeholder="Country" />
-                            <input id="language-query" type="text" placeholder="Language Code" />
-                            <button id="holidays-btn" class="btn">Render Holiday</button>
-                        </div>
-                    </div>
-                    <div id="holidays-list" class="flex flex-column ">
-                        <h1>Holiday of a Country</h1>
-                        <ul>
-                            <li></li>
-                            <li>b</li>
-                            <li>c</li>
-                            <li>d</li>
-                            <li>e</li>
-                            <li>f</li>
-                            <li>g</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-6 ">
-                    <div id="countries-list" class="flex flex-column ">
-                        <h1>Countries List <button id="countries-list-btn" class="btn">Render Countries List</button>
-                        </h1>
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                            <li>d</li>
-                            <li>e</li>
-                        </ul>
-                    </div>
-                    <div id="languages-list" class="flex flex-column ">
-                        <h1>Languages List <button id="languages-list-btn" class="btn">Render Languages List</button>
-                        </h1>
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                            <li>d</li>
-                            <li>e</li>
-                        </ul>
+							<div class="flex flex-wrap justify-content-center">
+								<input id="search-query" type="text" placeholder="Search" />
+								<input id="year-query" type="text" placeholder="Year" />
+								<input id="month-query" type="text" placeholder="Month" />
+								<input id="day-query" type="text" placeholder="Day" />
+								<input id="country-query" type="text" placeholder="Country" />
+								<input id="language-query" type="text" placeholder="Language Code" />
+								<button id="holidays-btn" class="btn">Render Holiday</button>
+							</div>
+						</div>
+						<div id="holidays-list" class="flex flex-column">
+							<h1>Holiday of a Country</h1>
+							<ul>
+								<li></li>
+								<li>b</li>
+								<li>c</li>
+								<li>d</li>
+								<li>e</li>
+								<li>f</li>
+								<li>g</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6">
+						<div id="countries-list" class="flex flex-column">
+							<h1>Countries List <button id="countries-list-btn" class="btn">Render Countries List</button></h1>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+								<li>c</li>
+								<li>d</li>
+								<li>e</li>
+							</ul>
+						</div>
+						<div id="languages-list" class="flex flex-column">
+							<h1>Languages List <button id="languages-list-btn" class="btn">Render Languages List</button></h1>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+								<li>c</li>
+								<li>d</li>
+								<li>e</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-    <script src="./script.js"></script>
-</body>
-
+		<script src="./script.js"></script>
+	</body>
 </html>
