@@ -84,9 +84,7 @@ const renderCountries = async () => {
 	try {
 		const countriesList = document.getElementById('countries-list');
 		const ulCountriesList = countriesList.children[2];
-		while (ulCountriesList.firstChild) {
-			ulCountriesList.removeChild(ulCountriesList.firstChild);
-		}
+		ulCountriesList.innerHTML = '';
 		const data = await getCountries();
 		console.log('data', data);
 		data.countries.forEach((country, index) => {
@@ -149,17 +147,10 @@ let countryQuery = 'VN';
 let languageQuery = null;
 let monthQuery = null;
 
-document.getElementById('countries-list-btn').addEventListener('click', async (e) => {
-	e.preventDefault();
-	await renderCountries();
-});
-document.getElementById('languages-list-btn').addEventListener('click', async (e) => {
-	e.preventDefault();
-	await renderLanguages();
-});
-document.getElementById('holidays-btn').addEventListener('click', async (e) => {
-	e.preventDefault();
-	await renderHolidays();
+document.getElementById('countries-list-btn').addEventListener('click', (e) => renderCountries());
+document.getElementById('languages-list-btn').addEventListener('click', (e) => renderLanguages());
+document.getElementById('holidays-btn').addEventListener('click', (e) => {
+	renderHolidays();
 });
 document.getElementById('month-query').addEventListener('change', (e) => {
 	monthQuery = e.target.value;
@@ -175,7 +166,6 @@ document.getElementById('day-query').addEventListener('change', (e) => {
 });
 document.getElementById('country-query').addEventListener('change', (e) => {
 	countryQuery = e.target.value;
-	console.log(countryQuery);
 });
 document.getElementById('language-query').addEventListener('change', (e) => {
 	languageQuery = e.target.value;
