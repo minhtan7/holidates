@@ -2,60 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoliDates</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <header>
+        <!-- <img
+				src="https://images.unsplash.com/photo-1446822622709-e1c7ad6e82d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=300&q=80"
+				alt=""
+				width="100%"
+				height="auto"
+			/> -->
         <nav class="text-center border">
-            <h1>HoliSafe</h1>
+            <h1>HoliDates</h1>
             <q>To travel is to love</q>
-
         </nav>
     </header>
     <main>
-        <section id="holiday-list" class=" text-center border container">
+        <!-- <section id="intro" class="flex text-center border">
+            <div>
+                <h4>HoliSafe</h4>
+                <q>To travel is to love</q>
+            </div>
+        </section> -->
+        <section id="holiday-list" class="text-center container">
             <div class="row flex">
                 <div class="col-6">
-                    <div id="tool-bar" class="border">
-                        <h1>Query Option</h1>
-                        <!-- <div class="group-input">
-                            <div class="flex flex-wrap">
-                                <div class="tooltip">
-                                    <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
-                                    <span class="tooltip-text">Start Date</span>
+                    <div class="card-wrapper">
+                        <div class="card-border"></div>
+                        <div id="tool-bar" class="border card card-shadow">
+                            <h3>Query Option</h3>
+                            <!-- <div class="group-input">
+                                <div class="flex flex-wrap">
+                                    <div class="tooltip">
+                                        <input id="start-date" type="date" placeholder="Start Date" max="2020-12-26" />
+                                        <span class="tooltip-text">Start Date</span>
+                                    </div>
+                                    <div class="tooltip">
+                                        <input id="end-date" type="date" placeholder="End Date" max="2020-12-26" />
+                                        <span class="tooltip-text">End Date</span>
+                                    </div>
+                                    <input id="day-off" type="text" placeholder="Days off" />
                                 </div>
-                                <div class="tooltip">
-                                    <input id="end-date" type="date" placeholder="End Date" max="2020-12-26" />
-                                    <span class="tooltip-text">End Date</span>
+                                <div class="wrapper-days-btn left">
+                                    <button id="next-working-day-btn" class="btn">Next working day</button>
+                                    <span class="hidden">Hello</span>
                                 </div>
-                                <input id="day-off" type="text" placeholder="Days off" />
+                                <div class="wrapper-days-btn right">
+                                    <button id="working-days-btn" class="btn">Working days between</button>
+                                    <span class="">Hello</span>
+                                </div>
+                            </div> -->
+                            <div class="flex flex-wrap justify-content-center">
+                                <input id="search-query" type="text" placeholder="Search" />
+                                <input id="year-query" type="text" placeholder="Year" />
+                                <input id="month-query" type="text" placeholder="Month" />
+                                <input id="day-query" type="text" placeholder="Day" />
+                                <input id="country-query" type="text" placeholder="Country" />
+                                <input id="language-query" type="text" placeholder="Language Code" />
+                                <button id="holidays-btn" class="btn">Render Holiday</button>
                             </div>
-                            <div class="wrapper-days-btn left">
-                                <button id="next-working-day-btn" class="btn">Next working day</button>
-                                <span class="hidden">Hello</span>
-                            </div>
-                            <div class="wrapper-days-btn right">
-                                <button id="working-days-btn" class="btn">Working days between</button>
-                                <span class="">Hello</span>
-                            </div>
-                        </div> -->
-                        <div class="flex flex-wrap justify-content-center">
-                            <input id="search-query" type="text" placeholder="Search" />
-                            <input id="year-query" type="text" placeholder="2020" />
-                            <input id="month-query" type="text" placeholder="Month" />
-                            <input id="day-query" type="text" placeholder="Day" />
-                            <input id="country-query" type="text" placeholder="VN" />
-                            <input id="language-query" type="text" placeholder="Language Code" />
-                            <button id="holidays-btn" class="btn">Render Holiday</button>
                         </div>
                     </div>
-                    <div id="holidays-list" class="flex flex-column ">
-                        <h1>Holiday of a Country</h1>
+
+                    <div id="holidays-list" class="flex flex-column card card-shadow">
+                        <h3>Holiday of a Country</h3>
                         <ul>
                             <li></li>
                             <li>b</li>
@@ -67,33 +85,39 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-6 ">
-                    <div id="countries-list" class="flex flex-column ">
-                        <h1>Countries List <button id="countries-list-btn" class="btn">Render Countries List</button>
-                        </h1>
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                            <li>d</li>
-                            <li>e</li>
-                        </ul>
+                <div class="col-6">
+                    <div class="card-wrapper">
+                        <div class="card-border"></div>
+                        <div id="countries-list" class="flex flex-column card card-shadow">
+                            <h3>Countries List</h3>
+                            <div><button id="countries-list-btn" class="btn top-right-btn">Render Countries
+                                    List</button></div>
+                            <ul>
+                                <li>a</li>
+                                <li>b</li>
+                                <li>c</li>
+                                <li>d</li>
+                                <li>e</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="languages-list" class="flex flex-column ">
-                        <h1>Languages List <button id="languages-list-btn" class="btn">Render Languages List</button>
-                        </h1>
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                            <li>d</li>
-                            <li>e</li>
-                        </ul>
-
+                    <div class="card-wrapper">
+                        <div class="card-border"></div>
+                        <div id="languages-list" class="flex flex-column card card-shadow">
+                            <h3>Languages List</h3>
+                            <div><button id="languages-list-btn" class="btn top-right-btn">Render Languages
+                                    List</button></div>
+                            <ul>
+                                <li>a</li>
+                                <li>b</li>
+                                <li>c</li>
+                                <li>d</li>
+                                <li>e</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
 
