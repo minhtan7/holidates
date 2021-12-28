@@ -52,6 +52,20 @@ html {
     padding-right: 15px;
     padding-left: 15px;
 }
+.btn{
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #8bbcf9;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+.btn:hover{
+    background-color: #b9d7fd;
+}
+input[id$=query]{
+    width: 30%;
+}
 
 /* Nav start */
 nav {
@@ -62,12 +76,6 @@ nav > h1 {
   font-size: 2rem;
 }
 
-#holiday-list {
-  justify-content: space-around;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 2rem;
-}
 #tool-bar {
   padding: 1.5em;
   margin-bottom: 1em;
@@ -78,9 +86,17 @@ nav > h1 {
 #tool-bar input{
     margin: 0.2rem 0.1rem;
     padding: 5px 10px;
-    /* width: 30%; */
     height: 2.2rem;
     flex-grow: 1;
+}
+#holiday-list {
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+#holidays-list > ul {
+    height: 29.5rem ;  
 }
 #countries-list > h1, #languages-list > h1, #holidays-list >h1{
     margin: 1rem 0;
@@ -95,17 +111,13 @@ nav > h1 {
     transform: translate(0,-20%);
 }
 #countries-list > ul, #languages-list > ul , #holidays-list > ul{
-  /* border-bottom: 1px solid #80808036; */
   padding: 0;
   overflow-y: scroll;
   height: 18rem;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
-  /* box-shadow: 0 5px 15px 5px #80808036; */
 }
-#holidays-list > ul {
-    height: 29.5rem ;  
-}
+
 #countries-list > ul > li, #languages-list > ul > li , #holidays-list > ul > li{
   border: 1px solid black;
   padding: 1.5em;
@@ -121,22 +133,6 @@ nav > h1 {
   border: 1px solid gray;
   margin-bottom: 2rem;
 }
-
-#load-more {
-  align-self: flex-end;
-}
-.btn{
-    padding: 5px 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: #8bbcf9;
-    cursor: pointer;
-    margin: 0.5rem 0;
-}
-.btn:hover{
-    background-color: #b9d7fd;
-}
-
 
 .tooltip{
     display: inline-block;
@@ -175,9 +171,6 @@ nav > h1 {
     transition-duration: 0.2s;
 }
 
-input[id$=query]{
-    width: 30%;
-}
 #tool-bar .tooltip, #tool-bar input#day-off{
   width: 32%;
 }
