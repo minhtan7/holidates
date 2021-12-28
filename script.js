@@ -91,7 +91,7 @@ const renderCountries = async () => {
 		console.log('data', data);
 		data.countries.forEach((country, index) => {
 			const x = document.createElement('li');
-			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${country.name}</div><div>Code: ${country.code}</div></div>`;
+			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${country.name}</div><div class="li-text">Code: ${country.code}</div></div>`;
 			ulCountriesList.appendChild(x);
 		});
 	} catch (err) {
@@ -109,7 +109,7 @@ const renderLanguages = async () => {
 		const data = await getLanguages();
 		data.languages.forEach((language, index) => {
 			const x = document.createElement('li');
-			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${language.name}</div><div>Code: ${language.code}</div></div>`;
+			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${language.name}</div><div class="li-text">Code: ${language.code}</div></div>`;
 			ulLanguagesList.appendChild(x);
 		});
 	} catch (err) {
@@ -129,7 +129,10 @@ const renderHolidays = async () => {
 		console.log('data', data);
 		data.holidays.forEach((holiday, index) => {
 			const x = document.createElement('li');
-			x.append(`${index + 1}. ${holiday.name} - ${holiday.weekday.date.name} - ${holiday.date}`);
+			x.innerHTML = `<div class="bullet">${index + 1}</div><div class="li-wrapper"><div class="li-title">${holiday.name}</div><div class="li-text">${holiday.weekday.date.name} - ${
+				holiday.date
+			}</div></div>`;
+
 			ulHolidaysList.appendChild(x);
 		});
 	} catch (err) {
