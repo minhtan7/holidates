@@ -21,7 +21,6 @@ const getLanguages = async ()=>{
         console.log("err", err)
     }
 }
-
 const getHolidays = async ({country, year, month, day, language, search} )=>{
     try{
         let countryQuery = "" //require
@@ -59,7 +58,6 @@ const getHolidays = async ({country, year, month, day, language, search} )=>{
         console.log("err", err)
     }
 }
-
 const getNextWorkingDay = async (startDate,days)=>{
     try{
         const url = `https://holidayapi.com/v1/workday?pretty&country=VN&start=${startDate}&days=${days}&key=${API_KEY}`
@@ -93,6 +91,7 @@ const renderCountries = async()=>{
             ulCountriesList.removeChild(ulCountriesList.firstChild)
         }
         const data = await getCountries()
+        console.log("data", data)
         data.countries.forEach((country, index)=>{
             const x = document.createElement("li")
             x.append(`${index+1}. ${country.name} - Code: "${country.code}"`)
@@ -143,40 +142,13 @@ const renderHolidays = async()=>{
 
 
 //Handle event
-// let startDate = null
-// let endDate = null
-// let days = null
+
 let searchQuery = null
 let yearQuery = 2020
 let dayQuery = null
 let countryQuery = "VN"
 let languageQuery = null
 let monthQuery = null
-// document.getElementById("start-date").addEventListener("change",(e)=>{
-//     startDate = e.target.value
-// })
-// document.getElementById("end-date").addEventListener("change",(e)=>{
-//     endDate = e.target.value
-// })
-// document.getElementById("day-off").addEventListener("change",(e)=>{
-//     days = e.target.value
-// })
-// document.getElementById("next-working-day-btn").addEventListener("click", async (e)=>{
-//     e.preventDefault()
-//     let data
-//     if(startDate&&days){
-//         data = await getNextWorkingDay(startDate, days)
-//     }
-//     console.log("data", data)
-// })
-// document.getElementById("working-days-btn").addEventListener("click", async (e)=>{
-//     e.preventDefault()
-//     let data
-//     if(startDate && endDate){
-//         data = await getWorkDays(startDate, endDate)
-//     }
-//     console.log("data", data)
-// })
 
 document.getElementById("countries-list-btn").addEventListener("click", async (e)=>{
     e.preventDefault()
@@ -190,11 +162,9 @@ document.getElementById("holidays-btn").addEventListener("click", async (e)=>{
     e.preventDefault()
     await renderHolidays()
 })
-
 document.getElementById("month-query").addEventListener("change",(e)=>{
     monthQuery = e.target.value
 })
-
 document.getElementById("search-query").addEventListener("change",(e)=>{
     searchQuery = e.target.value
 })

@@ -62,18 +62,6 @@ nav > h1 {
   font-size: 2rem;
 }
 
-/* Section intro start */
-/* #intro {
-  height: 40vh;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-image: url("https://wallpapercave.com/wp/wp8881504.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-} */
-/* Section holiday-list start */
-
 #holiday-list {
   justify-content: space-around;
   padding-top: 1rem;
@@ -124,6 +112,9 @@ nav > h1 {
   margin: 1em;
   text-align: left;
   list-style: none;
+  border-radius: 15px;
+  box-shadow: 0 0 0.5rem 1rem rgba(#000, 1);
+
 }
 #countries-list ,#languages-list, #holidays-list{
   padding: 1.5rem;
@@ -190,49 +181,3 @@ input[id$=query]{
 #tool-bar .tooltip, #tool-bar input#day-off{
   width: 32%;
 }
-
-/* .wrapper-days-btn{
-  position: relative;
-  display: inline-block;
-}
-.wrapper-days-btn span{
-  position: absolute;
-  background-color:#8bbcf9 ;
-  padding: 5px 10px;
-  
-}
-.wrapper-days-btn > span:after{
-  content: "";
-  border: 10px solid;
-  position: absolute;
-}
-.hidden{
-  opacity: 0;
-  transition-duration: 0.3s;
-}
-.wrapper-days-btn.left span{
-  left: -4rem;
-  top:50%;
-  transform: translate(0,-50%);
-}
-.wrapper-days-btn.left span:after{
-  border-color: transparent   transparent transparent #8bbcf9;
-  top: 50%;
-  right: -30%;
-  transform: translate(0, -50%);
-}
-
-.wrapper-days-btn.right span{
-  right: -4rem;
-  top:50%;
-  transform: translate(0,-50%);
-}
-.wrapper-days-btn.right span:after{
-  border-color: transparent #8bbcf9  transparent transparent ;
-  top: 50%;
-  left: -30%;
-  transform: translate(0, -50%);
-}
-.group-input{
-  margin: 1em 0
-} */
